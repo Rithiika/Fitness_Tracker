@@ -1,0 +1,365 @@
+/* ================= Global Styles ================= */
+body {
+  background: #f7f9fc;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* ================= Headings ================= */
+h1, h2, h3, h4, h5 {
+  color: #1a1f36;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ================= Cards ================= */
+.card, .summary-card, .chart-card, .recommend-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #e1e4eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover, .summary-card:hover, .chart-card:hover, .recommend-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= Buttons ================= */
+button.btn {
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+button.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn-primary { background: #3498db; color: #fff; }
+.btn-primary:hover { background: #2980b9; }
+
+.btn-secondary { background: #ecf0f1; color: #333; }
+.btn-secondary:hover { background: #dce4ea; }
+
+.btn-success { background: #2ecc71; color: #fff; }
+.btn-success:hover { background: #27ae60; }
+
+.btn-danger { background: #e74c3c; color: #fff; }
+.btn-danger:hover { background: #c0392b; }
+
+/* ================= Inputs & Select ================= */
+.form-select, .form-control {
+  border-radius: 8px;
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #ced4da;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: all 0.2s ease;
+}
+
+.form-select:hover, .form-control:hover {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+/* ================= Circular Timer ================= */
+.circle-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 20px auto;
+}
+.circle-svg circle {
+  stroke-width: 10;
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s linear;
+}
+.circle-bg { stroke: #e6e6e6; }
+.circle-progress { stroke: #3498db; }
+.circle-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3498db;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ================= Progress Bars ================= */
+.progress, .progress-bar {
+  border-radius: 25px;
+  height: 20px;
+}
+
+.progress-bar {
+  background: #3498db;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ================= List Groups ================= */
+.list-group-item {
+  background: #ffffff;
+  border: 1px solid #e1e4eb;
+  color: #333;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+  background: #f0f4f8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ================= Stats Section (Fix visibility) ================= */
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stats-container .stat-box {
+  flex: 1 1 150px;
+  background: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e1e4eb;
+}
+
+.stats-container .stat-box h4 {
+  color: #3498db;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.stats-container .stat-box p {
+  color: #555;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ================= Login Page ================= */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f9fc;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid #e1e4eb;
+}
+
+.login-card h2 {
+  text-align: center;
+  color: #3498db;
+  margin-bottom: 30px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #2980b9;
+  box-shadow: 0 0 12px rgba(52,152,219,0.3);
+}
+
+/* ================= Workout Tracker ================= */
+.fitness-container {
+  background: #f7f9fc;
+  color: #333;
+  min-height: 100vh;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fitness-container h1, .fitness-container h3, .fitness-container h4 {
+  color: #3498db;
+}
+
+.fitness-container video {
+  width: 100%;
+  max-width: 640px;
+  border: 2px solid #3498db;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(52,152,219,0.2);
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.fitness-container button:first-of-type {
+  background-color: #3498db;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.fitness-container button:last-of-type {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.fitness-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fitness-container li {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  color: #333;
+  font-size: 1rem;
+}
+/* ================= Summary Cards ================= */
+.summary-card {
+  background: #ffffff !important; /* Light background for visibility */
+  color: #333 !important;         /* Dark text */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e1e4eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summary-card h5 {
+  font-weight: 600;
+  color: #3498db !important; /* Blue titles */
+  margin-bottom: 10px;
+}
+
+.summary-card h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #555 !important; /* Dark value text */
+}
+
+/* Optional: Hover effect */
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ================= Progress Bar ================= */
+.gradient-progress .progress-bar {
+  background: linear-gradient(90deg, #00ffcc, #00aaff, #ffcc00);
+  color: #0b0f12;
+  font-weight: bold;
+  animation: pulseProgress 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulseProgress {
+  0% {opacity: 0.8;}
+  100% {opacity: 1;}
+}
+
+/* ================= Chart Cards ================= */
+.chart-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ================= Recommendation Card ================= */
+.recommend-card {
+  background: #ffffff !important; /* Light background */
+  color: #333 !important;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e1e4eb;
+}
+
+.recommend-card h4 {
+  color: #2ecc71 !important; /* Green for recommendation title */
+}
+
+.recommend-card p {
+  color: #555 !important;
+}
+
+/* ================= Text Glow Removal ================= */
+.glow-text, .text-warning, .text-info, .text-success {
+  text-shadow: none !important; /* Remove heavy glow for professional look */
+}
+
+/* ================= Buttons ================= */
+.btn-info {
+  background: #3498db;
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary {
+  background: #ecf0f1;
+  color: #333;
+  border: none;
+}
+
+/* Optional hover effect */
+.btn-info:hover { background: #2980b9; }
+.btn-secondary:hover { background: #dce4ea; }
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .summary-card { margin-bottom: 15px; }
+  .chart-card { padding: 15px; }
+  .recommend-card { padding: 15px; }
+}
